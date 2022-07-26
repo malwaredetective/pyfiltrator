@@ -16,7 +16,7 @@ def main():
     # Positional arguments for DNS
     dns.add_argument('-f', '--file', metavar='<string>', type=str, required=True, help='Specify the path to the target file')
     dns.add_argument('-d', '--domain', metavar='<string>', type=str, required=True, help="The base URL of the target domain: {example.com}")
-    dns.add_argument('-r', '--resolver', metavar='<string>', type=str, required=True, help="The remote IP Address of the DNS Server that will resolve the DNS queries")
+    dns.add_argument('-r', '--resolver', metavar='<string>', type=str, required=True, help="The IP Address of the remote DNS server that will resolve the DNS queries")
     dns.add_argument('-l', '--length-of-payload', metavar='<int>', type=int, choices=[24,48,64,88], default=24, required=False, help='Specify a custom payload length when transmitting the file: {24,48,64,88} (Default: 24)')
 
     # Positional arguments for HTTP
