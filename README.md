@@ -44,7 +44,7 @@ options:
   -d <string>, --domain <string>
                         The base URL of the target domain: {example.com}
   -r <string>, --resolver <string>
-                        The remote IP Address of the DNS Server that will resolve the DNS queries
+                        The IP Address of the remote DNS server that will resolve the DNS queries
   -l <int>, --length-of-payload <int>
                         Specify a custom payload length when transmitting the file: {24,48,64,88} (Default: 24)
 ```
