@@ -8,10 +8,6 @@ def main():
     # Process Command-Line Arguments
     parser = argparse.ArgumentParser(description = "A Python script used to covertly exfil files over the network. This script will stage a file into bite-sized chunks of base64 encoded data, then exfiltrate the file over the network using the protocol of your choosing.", add_help=True)
 
-    # Display global arguments in the main help menu
-    parser.add_argument('-f', '--file', metavar='<string>', type=str, help='Specify the path to the target file')
-    parser.add_argument('-d', '--domain', metavar='<string>', type=str, help="The base URL of the target domain: {example.com}")
-
     # Create subparsers to process positional arguments that are protocol dependent
     subparser = parser.add_subparsers(dest='mode', metavar='mode', help='Use <mode> -h to list addtional required and optional arguments for the selected mode')
     dns = subparser.add_parser('dns', description="A Python script used to covertly exfil files over the network. This script will stage a file into bite-sized chunks of base64 encoded data, then use a remote DNS server that's under your control to exfil the file over DNS. The victim host will exfil the payload by querying subdomains for the domain you specify, using the chunked data as a subdomain.", help='Use DNS queries to exfil a file over DNS')
