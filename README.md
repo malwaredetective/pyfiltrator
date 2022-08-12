@@ -66,3 +66,6 @@ options:
                         Specify a custom payload length when transmitting the file: {24,48,64,88} (Default: 24)
   -s, --ssl             Use HTTPS when transfering the file (Default: HTTP)
 ```
+
+## Disclaimer
+This project was created for educational purposes and not designed for malicious use! Personally, I will be using this project to develop Capture-The-Flag challenges! 
