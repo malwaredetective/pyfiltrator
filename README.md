@@ -1,10 +1,10 @@
 # pyfiltrator.py
-
+![python](https://img.shields.io/badge/python-3.0%2B-blue)
 
 ## Description
 A Python script used to covertly exfil files over the network.
 
-```
+```bash
 usage: pyfiltrator.py [-h] [-f <string>] [-d <string>] mode ...
 
 A Python script used to covertly exfil files over the network. This script will stage a file into bite-sized chunks of base64 encoded data, then exfiltrate the file over the network using the protocol of your choosing.
@@ -27,11 +27,15 @@ options:
 
 ## Usage
 - Download the pyfiltrator repository: `git clone https://github.com/malwaredetective/pyfiltrator.git`
+- Navigate to the repository: `cd pyfiltrator` and setup a virtual python enviornment: `python3 -m venv venv` 
+- Activate the python virtual enviornment:
+  - Linux: `source venv/bin/activate` 
+  - Windows: `venv\Scripts\activate`
 - Install the additional Python packages: `pip install -r requirements.txt`
-- Execute **pyfiltrator.py** within your terminal: `python pyfiltrator.py`
+- Execute **pyfiltrator.py** within your terminal: `python3 ./pyfiltrator.py`
 
 ## Exfiling a File over DNS
-```
+```bash
 usage: pyfiltrator.py dns [-h] -f <string> -d <string> -r <string> [-l <int>]
 
 A Python script used to covertly exfil files over the network. This script will stage a file into bite-sized chunks of base64 encoded data, then use a remote DNS server that's under your control to exfil the file over DNS. The victim
@@ -50,7 +54,7 @@ options:
 ```
 
 ## Exfiling a File over HTTP
-```
+```bash
 usage: pyfiltrator.py http [-h] -f <string> -d <string> [-l <int>] [-s]
 
 A Python script used to covertly exfil over the network. This script will stage a file into bite-sized chunks of base64 encoded data, then send HTTP GET requests to a server that's under your control to exfil files over the web. The
